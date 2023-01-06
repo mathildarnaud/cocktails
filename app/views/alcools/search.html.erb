@@ -1,0 +1,17 @@
+<div class="search">
+  <div class ="search-bar">
+
+    <%= form_with url: alcools_path, method: :get, class: "d-flex", id: 'form-cocktail' do %>
+      <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Trouver le cocktail de vos rêves..!"
+      %>
+
+        <%= submit_tag " ", id: "nav-bar-bnt"  %>
+    <% end %>
+  </div>
+  <div class="illus">
+    <%= image_tag "allcocktails2.png" %>
+  </div>
+</div>

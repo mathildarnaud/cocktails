@@ -1,0 +1,14 @@
+<div class="alcools">
+
+  <% @alcools.each do |alcool| %>
+   <div class="alcool">
+      <%= link_to alcool_path(alcool) do %>
+      <div class="type">
+        <h1> <%= alcool.name %> </h1>
+        <%= image_tag "flecheN.svg" %>
+      </div>
+        <% end %>
+    <div class="line-orange"></div>
+  </div>
+  <% end %>
+</div>

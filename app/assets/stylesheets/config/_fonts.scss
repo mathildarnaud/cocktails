@@ -1,0 +1,41 @@
+// Import Google fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+
+// Define fonts for body and headers
+$body-font:'Raleway', serif;
+$headers-font: 'Italiana', serif;
+
+// To use a font file (.woff) uncomment following lines
+// @font-face {
+//   font-family: "Font Name";
+//   src: font-url('FontFile.eot');
+//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
+//        font-url('FontFile.woff') format('woff'),
+//        font-url('FontFile.ttf') format('truetype')
+// }
+// $my-font: "Font Name";
+h1{
+  //styleName: H1;
+  font-family: 'Italiana';
+  font-size: 13vw;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 212px;
+  letter-spacing: 0em;
+  text-align: left;
+
+}
+
+h2 {
+  //styleName: H2;
+  font-family: 'Italiana';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 6.5vw;
+  line-height: 106px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #FF7A00;
+}

@@ -1,0 +1,31 @@
+<div class="navbar">
+  <%# <ul class="homepage"> %>
+    <li>
+      <%= link_to "/" do %>
+                  <%= image_tag "logo.svg", style:'width: 46%;;' %>
+      <% end %>
+    </li>
+    <div class="line-1"></div>
+
+  <%# </ul> %>
+  <div class="links">
+    <li>
+      <%= link_to alcools_path do %>
+                  <%= image_tag "alcools.svg", style:'width: 40%;' %>
+      <% end %>
+    </li>
+    <div class="line-1"></div>
+
+    <li>
+      <%= link_to search_path do %>
+        <%= image_tag "search.svg", style:'width: 56%;' %>
+      <% end %>
+    </li>
+
+  </div>
+  <li>
+    <div class="line-1"></div>
+
+    <a href="javascript:window.history.back();"><%= image_tag "flecheN.svg", style:'transform: rotate(180deg); width: 68%;' %></a>
+  </li>
+</div>

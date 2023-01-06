@@ -1,0 +1,36 @@
+@import "home";
+
+
+.alcools-show {
+  background-color: black;
+    .alcool-show {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+
+        text-decoration: none;
+      }
+      .type-show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        h1 {
+          font-size: 12.5vw;
+          margin: 0;
+          color: #FAF8F6;
+          ;
+        }
+        img {
+          height: 9vw;
+        }
+      }
+    }
+    .line-orange {
+    width: 100%;
+    background: #FF7A00;
+    border: 0.5px solid #FF7A00;
+  }
+
+  }
