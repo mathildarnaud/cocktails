@@ -9,7 +9,10 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/card_cocktails";
 @import "components/navbar";
+@import "components/search_alcool";
 @import "pages/index";
 @import "pages/show_alcool";
+@import "pages/show_cocktails";
 @import "pages/search";

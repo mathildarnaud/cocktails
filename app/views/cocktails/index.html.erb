@@ -1,1 +1,14 @@
-Cocktails
+<div class="cocktail">
+
+  <% @cocktails.each do |cocktail| %>
+   <div class="cocktail">
+      <%= link_to cocktail_path(cocktail) do %>
+      <div class="type">
+        <h1> <%= cocktail.name %> </h1>
+        <%# <%= image_tag "flecheN.svg" %> %>
+      </div>
+        <% end %>
+    <div class="line-orange"></div>
+  </div>
+  <% end %>
+</div>

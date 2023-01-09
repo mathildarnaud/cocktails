@@ -5,6 +5,36 @@
       <%# <%= image_tag "flecheN.svg" %>
     </div>
   </div>
-    <div class="line-orange"></div>
+  <div class="line-orange">
+  </div>
+  <div class="search-alcool">
+    <div class ="search-bar-alcool">
+
+      <%= form_with url: cocktails_path(@cocktail), method: :get, class: "d-flex", id: 'form-cocktail' do %>
+        <%= text_field_tag :query,
+            params[:query],
+            class: "form-control-alcool",
+            placeholder: "Find a cocktail with #{@alcool.name}..!"
+        %>
+
+          <%= submit_tag " ", id: "nav-bar-bnt-alcool"  %>
+      <% end %>
+    </div>
+  </div>
+  <div class="line-orange">
+  </div>
+  <div class="cocktails">
+    <% @cocktails.each do |cocktail| %>
+    <div class="cocktail">
+      <div class="container">
+        <div class="item">
+          <%= link_to cocktail_path(cocktail) do %>
+                <h2> <%= cocktail.name %> </h2>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
 </div>
-<h2>Mojito</h2>
+
+</div>
