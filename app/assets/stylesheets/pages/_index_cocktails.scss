@@ -1,0 +1,45 @@
+@import "home";
+
+.cocktails-index {
+background-color: black;
+  .cocktail-index {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    a {
+
+      text-decoration: none;
+    }
+    .type {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      h1 {
+        font-size: 12.5vw;
+        margin: 0;
+        color: #FAF8F6;
+        ;
+      }
+      img {
+        height: 7vw;
+      }
+      }
+      .line-white {
+      width: 100%;
+      background: #FAF8F6;
+      border: 0.5px solid #FAF8F6;
+    }
+  }
+  .image-cock{
+    position: absolute;
+    top: 0vh;
+    left: 5vw;
+    img {
+      background-color: #FAF8F6;
+      z-index: -3;
+  }
+  }
+
+}

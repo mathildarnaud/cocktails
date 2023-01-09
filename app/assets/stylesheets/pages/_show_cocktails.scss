@@ -1,3 +1,52 @@
 .show-cocktails {
 margin-left: 10vw;
+display: grid;
+grid-template-columns: 1fr 25vw;
+
+  h2 {
+    margin: 0;
+    margin-top: 2vw;
+    width: 60vw;
+
+  }
+  .image {
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: 100Vh;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0;
+    width: 25vw;
+    border-left: 1px solid #FF7A00;
+  }
+  .ingr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 62vw;
+    h3{
+      padding: 0 1.25vw;
+      font-size: 1.25vw;
+    }
+
+  }
+  .recette{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // margin-left: 1vw;
+    width: 100%;
+  }
+  .line-orange {
+    width: 100%;
+    background: #FF7A00;
+    border: 0.5px solid #FF7A00;
+    margin: 3vw 0;
+  }
+  p {
+    padding: 0vw 4vw;
+    margin: 0;
+    margin-top: 2vw;
+  }
 }

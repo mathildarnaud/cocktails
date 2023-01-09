@@ -1,25 +1,33 @@
 <div class="show-cocktails">
   <div class="recette">
-      <h1><%= @cocktail.name %></h1>
-
-      <h3><%= @cocktail.measure1 %><%= @cocktail.ingredient1 %></h3>
-      <h3><%= @cocktail.measure2 %><%= @cocktail.ingredient4 %></h3>
-      <h3><%= @cocktail.measure3 %><%= @cocktail.ingredient2 %></h3>
-      <h3><%= @cocktail.measure4 %><%= @cocktail.ingredient3 %></h3>
-      <h3><%= @cocktail.measure5 %><%= @cocktail.ingredient5 %></h3>
-      <h3><%= @cocktail.measure6 %><%= @cocktail.ingredient6 %></h3>
-      <h3><%= @cocktail.measure7 %><%= @cocktail.ingredient7 %></h3>
-      <h3><%= @cocktail.measure8 %><%= @cocktail.ingredient8 %></h3>
-      <h3><%= @cocktail.measure9 %><%= @cocktail.ingredient9 %></h3>
-      <h3><%= @cocktail.measure10%> <%= @cocktail.ingredient10 %></h3>
-      <h3><%= @cocktail.measure11%> <%= @cocktail.ingredient11%></h3>
-      <h3><%= @cocktail.measure12%> <%= @cocktail.ingredient12%></h3>
-      <h3><%= @cocktail.measure13%> <%= @cocktail.ingredient13%></h3>
-      <h3><%= @cocktail.measure14%> <%= @cocktail.ingredient14%></h3>
-      <h3><%= @cocktail.measure15%> <%= @cocktail.ingredient15%><h3>
+      <h2><%= @cocktail.name %></h2>
+      <div class="line-orange">
+  </div>
+      <h3>Ingrédients :</h3>
+      <div class="line-orange"></div>
+      <div class="ingr">
+        <h3><%= @cocktail.measure1 %> <%= @cocktail.ingredient1 %></h3>
+        <h3><%= @cocktail.measure2 %> <%= @cocktail.ingredient4 %></h3>
+        <h3><%= @cocktail.measure3 %> <%= @cocktail.ingredient2 %></h3>
+        <h3><%= @cocktail.measure4 %> <%= @cocktail.ingredient3 %></h3>
+        <h3><%= @cocktail.measure5 %> <%= @cocktail.ingredient5 %></h3>
+        <h3><%= @cocktail.measure6 %> <%= @cocktail.ingredient6 %></h3>
+        <h3><%= @cocktail.measure7 %> <%= @cocktail.ingredient7 %></h3>
+        <h3><%= @cocktail.measure8 %> <%= @cocktail.ingredient8 %></h3>
+        <h3><%= @cocktail.measure9 %> <%= @cocktail.ingredient9 %></h3>
+        <h3><%= @cocktail.measure10%> <%= @cocktail.ingredient10 %></h3>
+        <h3><%= @cocktail.measure11%> <%= @cocktail.ingredient11%></h3>
+        <h3><%= @cocktail.measure12%> <%= @cocktail.ingredient12%></h3>
+        <h3><%= @cocktail.measure13%> <%= @cocktail.ingredient13%></h3>
+        <h3><%= @cocktail.measure14%> <%= @cocktail.ingredient14%></h3>
+        <h3><%= @cocktail.measure15%> <%= @cocktail.ingredient15%><h3>
+      </div>
+      <div class="line-orange"></div>
+      <h2>Have Fun !</h2>
       <p><%= @cocktail.instruction %></p>
   </div>
-  <div class="im%>age">
-    <img class="card-img-top img-thumbnail" src=<%= @cocktail.image %> alt="Card image cap">
+  <div class="image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=@cocktail.image %>)">
+    <%# <img class="card-img" src=<%= @cocktail.image %>
+
   </div>
 </div>
