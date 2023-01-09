@@ -2,6 +2,7 @@
 <div class="cocktails-index">
 
   <% @cocktails.each do |cocktail| %>
+  <% if cocktail.name != nil %>
    <div class="cocktail-index">
       <%= link_to cocktail_path(cocktail) do %>
       <div class="type">
@@ -15,5 +16,6 @@
         <% end %>
     <div class="line-white"></div>
   </div>
+        <% end %>
   <% end %>
 </div>
