@@ -14,13 +14,15 @@ background-color: black;
     .type {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       flex-direction: row;
-      h1 {
-        font-size: 12.5vw;
-        margin: 0;
-        color: #FAF8F6;
-        ;
+      width: 70vw;
+
+      h2 {
+        font-size: 6vw;
+        // margin: 0;
+        // color: #FAF8F6;
+        text-align: end;
       }
       img {
         height: 7vw;
