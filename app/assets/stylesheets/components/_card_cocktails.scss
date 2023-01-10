@@ -44,9 +44,12 @@
   rgba(255, 255, 255, 0.1),
   rgba(255, 255, 255, 0.1)
   );
-  background-image: image-url('allcocktails.png');
+  background-image: image-url('allcocktails2.png');
   /* background-size: cover; */
-  background-size: 100VH;
+  // background-size: 100VH;
+  background-size: 110VH;
+  transform: rotate(180deg);
+
   background-color: #FAF8F6;
   background-position: center;
   height: 31vh;
@@ -72,6 +75,8 @@
     width: 27vw;
     background-color: black;
     align-items: center;
+    transform: rotate(180deg);
+
     a {
       margin: 0;
       text-decoration: none;
@@ -84,7 +89,7 @@
       h2 {
 
         margin: 0;
-        font-size: 4.5vw;
+        font-size: 4vw;
         color: #FF7A00;
         text-align: center;
         color: #FF7A00;

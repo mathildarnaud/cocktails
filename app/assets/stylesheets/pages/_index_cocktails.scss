@@ -2,6 +2,8 @@
 
 .cocktails-index {
 background-color: black;
+margin-top: 14vh;
+
   .cocktail-index {
     display: flex;
     flex-direction: column;
@@ -43,5 +45,9 @@ background-color: black;
       z-index: -3;
   }
   }
-
+}
+.line-orange {
+  width: 100%;
+  background: #FF7A00;
+  border: 0.5px solid #FF7A00;
 }

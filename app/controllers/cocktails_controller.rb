@@ -6,7 +6,14 @@ class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
     if params[:query].present?
-      @cocktails = @cocktails.where('name ILIKE ?', "%#{params[:query]}%")
+      sql_query = <<~SQL
+        lower(name) LIKE lower(:query)
+        OR lower(ingredient1) LIKE lower(:query)
+        OR lower(ingredient2) LIKE lower(:query)
+        OR lower(ingredient3) LIKE lower(:query)
+        OR lower(ingredient4) LIKE lower(:query)
+      SQL
+      @cocktails = @cocktails.where(sql_query, query: "%#{params[:query]}%")
     end
   end
 
@@ -23,4 +30,11 @@ class CocktailsController < ApplicationController
   def set_cocktail
     @cocktail = Cocktail.find(params[:id])
   end
+end
+def find_duplicates(array)
+  duplicates = []
+  array.each do |element|
+    duplicates << element if array.count(element) > 1
+  end
+  duplicates.uniq
 end

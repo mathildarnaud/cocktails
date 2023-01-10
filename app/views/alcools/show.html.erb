@@ -24,17 +24,19 @@
   <div class="line-orange">
   </div>
   <div class="cocktails">
-    <% @cocktails.each do |cocktail| %>
-     <% if cocktail.ingredient1 == @alcool.name || cocktail.ingredient2 == @alcool.name || cocktail.ingredient3 == @alcool.name ||cocktail.ingredient4 == @alcool.name ||cocktail.ingredient5 == @alcool.name ||cocktail.ingredient6 == @alcool.name  %>
-    <div class="cocktail">
-      <div class="container">
-        <div class="item">
-          <%= link_to cocktail_path(cocktail) do %>
-                <h2> <%= cocktail.name %> </h2>
-          <% end %>
+  <%@cocktails = @cocktails.uniq { |cocktail| cocktail.name }%>
+
+    <%@cocktails.each do |cocktail| %>
+      <% if cocktail.ingredient1 == @alcool.alt || cocktail.ingredient2 == @alcool.alt || cocktail.ingredient3 == @alcool.alt %>
+        <div class="cocktail">
+          <div class="container" >
+            <div class="item">
+              <%= link_to cocktail_path(cocktail) do %>
+                    <h2> <%= cocktail.name %> </h2>
+              <% end %>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
     <% end %>
     <% end %>
 </div>
