@@ -38,7 +38,7 @@ alcool_7 = Alcool.create(name: "Vodka", alt: 'Vodka')
 alcool_7.save!
 alcool_8 = Alcool.create(name: "Whisky", alt: 'Whiskey')
 alcool_8.save!
-alcool_8_1 = Alcool.create(name: "Whisky", alt: 'Blended whiskey')
+alcool_8_1 = Alcool.create(name: "Blended Whisky", alt: 'Blended whiskey')
 alcool_8_1.save!
 # alcool_3.save!
 alcool_9 = Alcool.create(name: "Vermouth", alt: 'Vermouth')
