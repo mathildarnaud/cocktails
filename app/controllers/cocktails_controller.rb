@@ -13,7 +13,7 @@ class CocktailsController < ApplicationController
         OR lower(ingredient3) LIKE lower(:query)
         OR lower(ingredient4) LIKE lower(:query)
       SQL
-      @cocktails = @cocktails.where(sql_query, query: "%#{params[:query]}%")
+      @cocktails = Cocktail.where(sql_query, query: "%#{params[:query]}%")
     end
   end
 
