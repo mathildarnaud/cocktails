@@ -14,6 +14,10 @@ class AlcoolsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
+  def search
+    @cocktails = Cocktail.all
+  end
+
   private
 
   def alcool_params

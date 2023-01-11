@@ -7,10 +7,37 @@
           class: "form-control",
           placeholder: "Find your dream cocktail by name or ingredients...!"
       %>
-
         <%= submit_tag " ", id: "nav-bar-bnt"  %>
     <% end %>
   </div>
+    <div class="js">
+  <%# <a class='btn-black' data-action="click->random#getRandomCocktail">Get a Random Cocktail</a> %>
+
+  </div>
+<!---
+<div class="cocktails-index" style='    z-index: 48;'>
+<%@cocktails = @cocktails.uniq { |cocktail| cocktail.name }%>
+  <% @cocktails.each do |cocktail| %>
+  <% if cocktail.name != nil %>
+   <div class="cocktail-index">
+      <%= link_to cocktail_path(cocktail) do %>
+      <div class="type">
+      <div class="image-cock">
+        <%# <img class="image-cock" src="cocktail.image " alt="cocktail" style='height: 24.6vw;'> %>
+      </div>
+
+        <h2 style="font-size: 6vw;"> <%= cocktail.name %> </h2>
+        <%= image_tag "fleche0.svg" %>
+      </div>
+        <% end %>
+    <div class="line-white"></div>
+  </div>
+        <% end %>
+  <% end %>
+</div>
+----->
+
+
   <div class="illus">
     <%= image_tag "allcocktails2.png" %>
   </div>

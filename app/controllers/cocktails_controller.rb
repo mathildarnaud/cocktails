@@ -31,10 +31,4 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
   end
 end
-def find_duplicates(array)
-  duplicates = []
-  array.each do |element|
-    duplicates << element if array.count(element) > 1
-  end
-  duplicates.uniq
-end
+

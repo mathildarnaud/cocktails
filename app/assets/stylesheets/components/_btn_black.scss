@@ -1,0 +1,30 @@
+.btn-black {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 1vw 2vw;
+  gap: 10px;
+  background: black;
+  justify-content: space-evenly;
+  border-radius: 3vw;
+  font-family: 'Raleway';
+  font-style: normal;
+  margin: 5px;
+  border: 2px solid #FF7A00;
+
+  text-decoration: none;
+  color: white;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  &:hover {
+    background: #FF7A00;;
+    // font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border: 2px solid black;
+
+  }
+}
