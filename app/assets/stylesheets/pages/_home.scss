@@ -14,7 +14,10 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
+  background: linear-gradient(355deg, #FAF8F6 0 50%, #faf8f631 80% 0%);
   display: flex;
+  z-index: 1;
+
   flex-direction: row;
   align-items: center;
   img{
@@ -69,10 +72,12 @@ body {
   display: flex;
   align-items: end;
   justify-content: end;
-  // margin: 0 1vw;
+  height: 100vh;
   img {
     height: 100vh;
-    margin: 2vh 1vw;
+    margin: -2vh 1vw;
+    position: fixed;
+    z-index: 0;
 
   }
 
