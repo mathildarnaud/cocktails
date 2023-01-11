@@ -1,33 +1,67 @@
-<div class="show-cocktails">
-  <div class="recette">
-      <h2><%= @cocktail.name %></h2>
-      <div class="line-orange">
-  </div>
-      <h3>Ingrédients :</h3>
-      <div class="line-orange"></div>
-      <div class="ingr">
-        <h3><%= @cocktail.measure1 %> <%= @cocktail.ingredient1 %></h3>
-        <h3><%= @cocktail.measure2 %> <%= @cocktail.ingredient4 %></h3>
-        <h3><%= @cocktail.measure3 %> <%= @cocktail.ingredient2 %></h3>
-        <h3><%= @cocktail.measure4 %> <%= @cocktail.ingredient3 %></h3>
-        <h3><%= @cocktail.measure5 %> <%= @cocktail.ingredient5 %></h3>
-        <h3><%= @cocktail.measure6 %> <%= @cocktail.ingredient6 %></h3>
-        <h3><%= @cocktail.measure7 %> <%= @cocktail.ingredient7 %></h3>
-        <h3><%= @cocktail.measure8 %> <%= @cocktail.ingredient8 %></h3>
-        <h3><%= @cocktail.measure9 %> <%= @cocktail.ingredient9 %></h3>
-        <h3><%= @cocktail.measure10%> <%= @cocktail.ingredient10 %></h3>
-        <h3><%= @cocktail.measure11%> <%= @cocktail.ingredient11%></h3>
-        <h3><%= @cocktail.measure12%> <%= @cocktail.ingredient12%></h3>
-        <h3><%= @cocktail.measure13%> <%= @cocktail.ingredient13%></h3>
-        <h3><%= @cocktail.measure14%> <%= @cocktail.ingredient14%></h3>
-        <h3><%= @cocktail.measure15%> <%= @cocktail.ingredient15%><h3>
-      </div>
-      <div class="line-orange"></div>
-      <h2>Have Fun !</h2>
-      <p><%= @cocktail.instruction %></p>
-  </div>
-  <div class="image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=@cocktail.image %>)">
-    <%# <img class="card-img" src=<%= @cocktail.image %>
 
+<div class="cocktail">
+
+    <h2 style='color: #FF7A00'><%= @cocktail.name %></h2>
+    <div class="recette">
+      <p class="line-orange"></p>
+        <h2>To do :</h2>
+      <p class="line-orange"></p>
+      <div class="ingr-im">
+        <div class="im">
+          <img class="card" src=<%= @cocktail.image%> >
+        </div>
+        <div class="ingr">
+          <% if @cocktail.ingredient1 != nil %>
+            <h3><%= @cocktail.measure1 %> <%= @cocktail.ingredient1 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient2 != nil %>
+            <h3><%= @cocktail.measure2 %> <%= @cocktail.ingredient2 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient3 != nil %>
+            <h3><%= @cocktail.measure3 %> <%= @cocktail.ingredient3 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient4 != nil %>
+            <h3><%= @cocktail.measure4 %> <%= @cocktail.ingredient4 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient5 != nil %>
+            <h3><%= @cocktail.measure5 %> <%= @cocktail.ingredient5 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient6 != nil %>
+            <h3><%= @cocktail.measure6 %> <%= @cocktail.ingredient6 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient7 != nil %>
+            <h3><%= @cocktail.measure7 %> <%= @cocktail.ingredient7 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient8 != nil %>
+            <h3><%= @cocktail.measure8 %> <%= @cocktail.ingredient8 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient9 != nil %>
+            <h3><%= @cocktail.measure9 %> <%= @cocktail.ingredient9 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient10 != nil %>
+            <h3><%= @cocktail.measure10 %> <%= @cocktail.ingredient10 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient11 != nil %>
+            <h3><%= @cocktail.measure11 %> <%= @cocktail.ingredient11 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient12 != nil %>
+            <h3><%= @cocktail.measure12 %> <%= @cocktail.ingredient12 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient13 != nil %>
+            <h3><%= @cocktail.measure13 %> <%= @cocktail.ingredient13 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient14 != nil %>
+            <h3><%= @cocktail.measure14 %> <%= @cocktail.ingredient14 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient15 != nil %>
+            <h3><%= @cocktail.measure15 %> <%= @cocktail.ingredient15 %></h3>
+          <% end %>
+        </div>
+      <%# <div class="instr"> %>
+        <h2>Have Fun !</h2>
+        <p><%= @cocktail.instruction %></p>
+      <%# </div> %>
+      </div>
+      <p class="line-orange"></p>
+    </div>
   </div>
-</div>

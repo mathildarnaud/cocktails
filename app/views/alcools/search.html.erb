@@ -9,36 +9,80 @@
       %>
         <%= submit_tag " ", id: "nav-bar-bnt"  %>
     <% end %>
+    <%= link_to "Get a Random Cocktail", search_path,class:'btn-black',:method => :get  %>
+  <%# <a class='btn-black'>Get a Random Cocktail</a> %>
   </div>
-    <div class="js">
-  <%# <a class='btn-black' data-action="click->random#getRandomCocktail">Get a Random Cocktail</a> %>
-
-  </div>
-<!---
-<div class="cocktails-index" style='    z-index: 48;'>
-<%@cocktails = @cocktails.uniq { |cocktail| cocktail.name }%>
-  <% @cocktails.each do |cocktail| %>
-  <% if cocktail.name != nil %>
-   <div class="cocktail-index">
-      <%= link_to cocktail_path(cocktail) do %>
-      <div class="type">
-      <div class="image-cock">
-        <%# <img class="image-cock" src="cocktail.image " alt="cocktail" style='height: 24.6vw;'> %>
-      </div>
-
-        <h2 style="font-size: 6vw;"> <%= cocktail.name %> </h2>
-        <%= image_tag "fleche0.svg" %>
-      </div>
-        <% end %>
-    <div class="line-white"></div>
-  </div>
-        <% end %>
-  <% end %>
 </div>
------>
 
+  <div class="cocktail-sample">
+  <%@cocktail = @cocktails.sample%>
 
+    <h2><%= @cocktail.name %></h2>
+    <div class="recette-sample">
+      <p class="line-orange"></p>
+        <h2>To do :</h2>
+      <p class="line-orange"></p>
+      <div class="ingr-im-sample">
+        <div class="im-sample">
+          <img class="card-sample" src=<%= @cocktail.image%> >
+        </div>
+        <div class="ingr-sample">
+            <% if @cocktail.ingredient1 != nil %>
+            <h3><%= @cocktail.measure1 %> <%= @cocktail.ingredient1 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient2 != nil %>
+            <h3><%= @cocktail.measure2 %> <%= @cocktail.ingredient2 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient3 != nil %>
+            <h3><%= @cocktail.measure3 %> <%= @cocktail.ingredient3 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient4 != nil %>
+            <h3><%= @cocktail.measure4 %> <%= @cocktail.ingredient4 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient5 != nil %>
+            <h3><%= @cocktail.measure5 %> <%= @cocktail.ingredient5 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient6 != nil %>
+            <h3><%= @cocktail.measure6 %> <%= @cocktail.ingredient6 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient7 != nil %>
+            <h3><%= @cocktail.measure7 %> <%= @cocktail.ingredient7 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient8 != nil %>
+            <h3><%= @cocktail.measure8 %> <%= @cocktail.ingredient8 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient9 != nil %>
+            <h3><%= @cocktail.measure9 %> <%= @cocktail.ingredient9 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient10 != nil %>
+            <h3><%= @cocktail.measure10 %> <%= @cocktail.ingredient10 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient11 != nil %>
+            <h3><%= @cocktail.measure11 %> <%= @cocktail.ingredient11 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient12 != nil %>
+            <h3><%= @cocktail.measure12 %> <%= @cocktail.ingredient12 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient13 != nil %>
+            <h3><%= @cocktail.measure13 %> <%= @cocktail.ingredient13 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient14 != nil %>
+            <h3><%= @cocktail.measure14 %> <%= @cocktail.ingredient14 %></h3>
+          <% end %>
+          <% if @cocktail.ingredient15 != nil %>
+            <h3><%= @cocktail.measure15 %> <%= @cocktail.ingredient15 %></h3>
+          <% end %>
+        </div>
+      <%# <div class="instr"> %>
+        <h2>Have Fun !</h2>
+        <p><%= @cocktail.instruction %></p>
+      <%# </div> %>
+      </div>
+      <p class="line-orange"></p>
+    </div>
+  </div>
   <div class="illus">
+<!---
     <%= image_tag "allcocktails2.png" %>
+---->
   </div>
-</div>

@@ -1,53 +1,85 @@
-.show-cocktails {
-margin-left: 10vw;
-display: grid;
-grid-template-columns: 1fr 25vw;
 
 
+.cocktail{
+  margin-left: 10vw;
+  margin-top: 2vh;
   h2 {
-    margin: 0;
-    margin-top: 2vw;
-    width: 60vw;
+    color: black;
 
   }
-  .image {
-    background-position: inherit;
-    background-repeat: no-repeat;
-    background-size: 100Vh;
-    height: 100vh;
-    position: fixed;
-    right: 0px;
-    top: 0;
-    width: 25vw;
-    border-left: 1px solid #FF7A00;
-  }
-  .ingr {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 62vw;
-    h3{
-      padding: 0 1.25vw;
-      font-size: 1.25vw;
-    }
 
-  }
   .recette{
-    display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // margin-left: 1vw;
-    width: 100%;
+    width: 89vw;
+
+    .ingr-im{
+      display: grid;
+      grid-template-columns: 22vw 1fr;
+      gap: 3vw;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 5vh 3vw;
+    }
+    @media(max-width: 375px)  {
+      .ingr-im {
+        grid-template-columns: 1fr
+      }
+
+    }
+    .card{
+      height: 30vh;
+    }
+    h2 {
+      margin: 0;
+      margin-top: 2vw;
+      // width: 60vw;
+      color: #FAF8F6;
+
+    }
+    img{
+      height: 30vh;
+      border-radius: 2vw;
+      border: 2px solid #FF7A00;
+    }
+    .ingr {
+      display: grid;
+      text-align: start;
+      grid-template-columns: 1fr 1fr;
+    }
+      @media(max-width: 375px)  {
+        .ingr {
+          grid-template-columns: 1fr 1fr;
+
+          text-align: center;
+        }
+      h3{
+        padding: 1.25vw;
+        font-size: 2vw;
+        color: #FF7A00;
+
+      }
+
+    }
+
+    .line-orange {
+      // width: 100vw;
+      background: #FF7A00;
+      border: 0.5px solid #FF7A00;
+      margin: 3vw 0;
+    }
+    p {
+      text-align: start;
+      margin: 0;
+      font-size: 2vw;
+
+      margin-top: 2vw;
+      color: #FAF8F6;
+    }
+
+    }
+
   }
-  .line-orange {
-    width: 100vw;
-    background: #FF7A00;
-    border: 0.5px solid #FF7A00;
-    margin: 3vw 0;
-  }
-  p {
-    padding: 0vw 4vw;
-    margin: 0;
-    margin-top: 2vw;
-    margin-bottom: 14vw;  }
-}
