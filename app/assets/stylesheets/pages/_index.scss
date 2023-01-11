@@ -2,24 +2,29 @@
 @import "home";
 
 .alcools {
-  display: grid;
-  grid-template-columns: 1fr;
+  background-color: black;
+
+      display: flex;
+      flex-direction: column;
+      align-items: end;
   .alcool {
     display: flex;
     flex-direction: column;
     align-items: end;
+    position: relative;
     a {
-      text-align: end;
-      display: flex;
-      align-items: end;
-      justify-content: end;
+      // text-align: end;
+      // display: flex;
+      // align-items: end;
+      // justify-content: end;
       text-decoration: none;
     }
     .type {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       flex-direction: row;
+      width: 70vw;
       h1 {
         font-size: 12.5vw;
         margin: 0;
