@@ -57,8 +57,6 @@ alcool_14 = Alcool.create(name: "Cognac", alt: 'Cognac')
 alcool_14.save!
 alcool_15 = Alcool.create(name: "Brandy", alt: 'Brandy')
 alcool_15.save!
-alcool_16 = Alcool.create(name: "Cachaça", alt: 'Cachaça')
-alcool_16.save!
 alcool_17 = Alcool.create(name: "Kahlua", alt: 'Kahlua')
 alcool_17.save!
 
