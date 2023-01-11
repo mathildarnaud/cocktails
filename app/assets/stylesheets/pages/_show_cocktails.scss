@@ -24,7 +24,7 @@
       text-align: center;
       margin: 5vh 3vw;
     }
-    @media(max-width: 375px)  {
+    @media(max-width: 1000px)  {
       .ingr-im {
         grid-template-columns: 1fr
       }
@@ -50,7 +50,7 @@
       text-align: start;
       grid-template-columns: 1fr 1fr;
     }
-      @media(max-width: 375px)  {
+      @media(max-width: 1000px)  {
         .ingr {
           grid-template-columns: 1fr 1fr;
 
