@@ -16,17 +16,21 @@
 
   <div class="cocktail-sample">
   <%@cocktail = @cocktails.sample%>
-
+ <% if @cocktail.name != nil %>
     <h2><%= @cocktail.name %></h2>
+  <% end %>
     <div class="recette-sample">
       <p class="line-orange"></p>
         <h2>To do :</h2>
       <p class="line-orange"></p>
       <div class="ingr-im-sample">
         <div class="im-sample">
+         <% if @cocktail.name != nil %>
           <img class="card-sample" src=<%= @cocktail.image%> >
+          <% end %>
         </div>
         <div class="ingr-sample">
+         <% if @cocktail.name != nil %>
             <% if @cocktail.ingredient1 != nil %>
             <h3><%= @cocktail.measure1 %> <%= @cocktail.ingredient1 %></h3>
           <% end %>
@@ -72,10 +76,13 @@
           <% if @cocktail.ingredient15 != nil %>
             <h3><%= @cocktail.measure15 %> <%= @cocktail.ingredient15 %></h3>
           <% end %>
+          <% end %>
         </div>
       <%# <div class="instr"> %>
         <h2>Have Fun !</h2>
+         <% if @cocktail.name != nil %>
         <p><%= @cocktail.instruction %></p>
+        <% end %>
       <%# </div> %>
       </div>
       <p class="line-orange"></p>
