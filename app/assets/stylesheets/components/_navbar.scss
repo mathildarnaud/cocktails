@@ -13,6 +13,9 @@
 .navbar {
   width: 10vw;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .navbar .links {
