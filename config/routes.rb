@@ -7,5 +7,6 @@ Rails.application.routes.draw do
 
   resources :alcools, only: %i[index show]
   resources :cocktails, only: %i[index create show]
-  get 'search', to: 'alcools#search'
+  # Remplace la dernière ligne par celle-ci :
+get 'search', to: 'cocktails#index'
 end
