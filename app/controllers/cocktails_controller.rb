@@ -8,10 +8,10 @@ class CocktailsController < ApplicationController
     if params[:query].present?
       sql_query = <<~SQL
         lower(name) LIKE lower(:query)
-        OR lower(ingredient1) LIKE lower(:query)
-        OR lower(ingredient2) LIKE lower(:query)
-        OR lower(ingredient3) LIKE lower(:query)
-        OR lower(ingredient4) LIKE lower(:query)
+        OR lower(ingredient1) ILIKE lower(:query)
+        OR lower(ingredient2) ILIKE lower(:query)
+        OR lower(ingredient3) ILIKE lower(:query)
+        OR lower(ingredient4) ILIKE lower(:query)
       SQL
       @cocktails = Cocktail.where(sql_query, query: "%#{params[:query]}%")
     end
