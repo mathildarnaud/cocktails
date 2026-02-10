@@ -1,17 +1,15 @@
 require "json"
 require "open-uri"
 
-puts "1. Nettoyage de la base de données..."
+puts "1. Nettoyage..."
 Cocktail.destroy_all
 Alcool.destroy_all
 
-puts "2. Création des 17 alcools sélectionnés..."
-# Cette liste assure une grande variété de cocktails
+puts "2. Création de la liste des 20 alcools..."
 alcools_to_import = [
   { name: "Gin", alt: "gin" },
   { name: "Vodka", alt: "vodka" },
-  { name: "Rhum Blanc", alt: "light_rum" },
-  { name: "Rhum Ambré", alt: "dark_rum" },
+  { name: "Rhum", alt: "rum" },
   { name: "Tequila", alt: "tequila" },
   { name: "Whisky", alt: "whiskey" },
   { name: "Bourbon", alt: "bourbon" },
@@ -24,7 +22,11 @@ alcools_to_import = [
   { name: "Amaretto", alt: "amaretto" },
   { name: "Sake", alt: "sake" },
   { name: "Absinthe", alt: "absinthe" },
-  { name: "Brandy", alt: "brandy" }
+  { name: "Brandy", alt: "brandy" },
+  { name: "Kahlua", alt: "kahlua" },
+  { name: "Malibu", alt: "malibu" },
+  { name: "Pisco", alt: "pisco" },
+  { name: "Champagne", alt: "champagne" }
 ]
 
 alcools_crees = {}
@@ -34,45 +36,42 @@ end
 
 puts "--- #{Alcool.count} alcools créés ---"
 
-puts "3. Importation des cocktails (Liaison API sécurisée)..."
+puts "3. Importation des cocktails..."
 
 alcools_crees.each do |alt_name, alcool_objet|
   puts "Importation pour : #{alcool_objet.name}..."
+  # Pause de 0.5s pour éviter d'être bloqué par l'API
+  sleep(0.5) 
 
   begin
-    # On utilise l'URL de filtre par ingrédient
     list_url = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=#{alt_name}"
     list_res = JSON.parse(URI.open(list_url).read)
 
     if list_res && list_res['drinks']
-      # On limite à 10 cocktails par alcool pour la performance sur Render
-      list_res['drinks'].take(10).each do |item|
+      # On en prend jusqu'à 20 par alcool pour avoir du volume
+      list_res['drinks'].take(20).each do |item|
         
-        # On va chercher les détails de chaque cocktail (ingrédients, instructions)
         encoded_name = URI.encode_www_form_component(item["strDrink"])
         detail_url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=#{encoded_name}"
-        detail_res = JSON.parse(URI.open(detail_url).read)
+        detail_data = JSON.parse(URI.open(detail_url).read)
 
-        if detail_res && detail_res['drinks']
-          c = detail_res['drinks'].first
-          
+        if detail_data && detail_data['drinks']
+          c = detail_data['drinks'].first
           Cocktail.create!(
             name: c["strDrink"],
             instruction: c["strInstructions"],
             image: c["strDrinkThumb"],
-            alcool: alcool_objet, # Liaison cruciale !
+            alcool: alcool_objet,
             ingredient1: c["strIngredient1"],
             ingredient2: c["strIngredient2"],
-            ingredient3: c["strIngredient3"],
             measure1: c["strMeasure1"],
-            measure2: c["strMeasure2"],
-            measure3: c["strMeasure3"]
+            measure2: c["strMeasure2"]
           )
         end
       end
     end
   rescue => e
-    puts "Erreur pour #{alcool_objet.name} : #{e.message}. On continue..."
+    puts "Erreur pour #{alcool_objet.name} : #{e.message}"
   end
 end
 
